@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MascotaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="MascotaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Adopcion" EntityType="MascotaModel.Adopcion" />
+    <EntitySet Name="Adoptantes" EntityType="MascotaModel.Adoptantes" />
+    <EntitySet Name="DetalleAdopcion" EntityType="MascotaModel.DetalleAdopcion" />
+    <EntitySet Name="Especie" EntityType="MascotaModel.Especie" />
+    <EntitySet Name="Hogar" EntityType="MascotaModel.Hogar" />
+    <EntitySet Name="Mascotas" EntityType="MascotaModel.Mascotas" />
+    <EntitySet Name="Personal" EntityType="MascotaModel.Personal" />
+    <EntitySet Name="Raza" EntityType="MascotaModel.Raza" />
+    <EntitySet Name="Tareas" EntityType="MascotaModel.Tareas" />
+    <EntitySet Name="Tipo_hogar" EntityType="MascotaModel.Tipo_hogar" />
+    <EntitySet Name="Usuarios" EntityType="MascotaModel.Usuarios" />
+    <AssociationSet Name="FK__Adopcion__id_ado__29572725" Association="MascotaModel.FK__Adopcion__id_ado__29572725">
+      <End Role="Adoptantes" EntitySet="Adoptantes" />
+      <End Role="Adopcion" EntitySet="Adopcion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Adopcion__usuari__2A4B4B5E" Association="MascotaModel.FK__Adopcion__usuari__2A4B4B5E">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Adopcion" EntitySet="Adopcion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleAd__id_ad__2F10007B" Association="MascotaModel.FK__DetalleAd__id_ad__2F10007B">
+      <End Role="Adopcion" EntitySet="Adopcion" />
+      <End Role="DetalleAdopcion" EntitySet="DetalleAdopcion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleAd__id_ma__300424B4" Association="MascotaModel.FK__DetalleAd__id_ma__300424B4">
+      <End Role="Mascotas" EntitySet="Mascotas" />
+      <End Role="DetalleAdopcion" EntitySet="DetalleAdopcion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mascotas__id_esp__1B0907CE" Association="MascotaModel.FK__Mascotas__id_esp__1B0907CE">
+      <End Role="Especie" EntitySet="Especie" />
+      <End Role="Mascotas" EntitySet="Mascotas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Hogar__id_person__0DAF0CB0" Association="MascotaModel.FK__Hogar__id_person__0DAF0CB0">
+      <End Role="Personal" EntitySet="Personal" />
+      <End Role="Hogar" EntitySet="Hogar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Hogar__id_tipo_h__0EA330E9" Association="MascotaModel.FK__Hogar__id_tipo_h__0EA330E9">
+      <End Role="Tipo_hogar" EntitySet="Tipo_hogar" />
+      <End Role="Hogar" EntitySet="Hogar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mascotas__id_hog__1CF15040" Association="MascotaModel.FK__Mascotas__id_hog__1CF15040">
+      <End Role="Hogar" EntitySet="Hogar" />
+      <End Role="Mascotas" EntitySet="Mascotas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mascotas__id_raz__1BFD2C07" Association="MascotaModel.FK__Mascotas__id_raz__1BFD2C07">
+      <End Role="Raza" EntitySet="Raza" />
+      <End Role="Mascotas" EntitySet="Mascotas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Personal__id_tar__0519C6AF" Association="MascotaModel.FK__Personal__id_tar__0519C6AF">
+      <End Role="Tareas" EntitySet="Tareas" />
+      <End Role="Personal" EntitySet="Personal" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Adopcion">
+    <Key>
+      <PropertyRef Name="id_adopcion" />
+    </Key>
+    <Property Name="id_adopcion" Type="Int32" Nullable="false" />
+    <Property Name="id_adoptante" Type="Int32" />
+    <Property Name="fecha_adopcion" Type="DateTime" />
+    <Property Name="usuario" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Adoptantes" Relationship="MascotaModel.FK__Adopcion__id_ado__29572725" FromRole="Adopcion" ToRole="Adoptantes" />
+    <NavigationProperty Name="Usuarios" Relationship="MascotaModel.FK__Adopcion__usuari__2A4B4B5E" FromRole="Adopcion" ToRole="Usuarios" />
+    <NavigationProperty Name="DetalleAdopcion" Relationship="MascotaModel.FK__DetalleAd__id_ad__2F10007B" FromRole="Adopcion" ToRole="DetalleAdopcion" />
+  </EntityType>
+  <EntityType Name="Adoptantes">
+    <Key>
+      <PropertyRef Name="id_adoptante" />
+    </Key>
+    <Property Name="id_adoptante" Type="Int32" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="dni" Type="Int32" />
+    <Property Name="direccion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Adopcion" Relationship="MascotaModel.FK__Adopcion__id_ado__29572725" FromRole="Adoptantes" ToRole="Adopcion" />
+  </EntityType>
+  <EntityType Name="DetalleAdopcion">
+    <Key>
+      <PropertyRef Name="id_detalle" />
+    </Key>
+    <Property Name="id_detalle" Type="Int32" Nullable="false" />
+    <Property Name="id_adopcion" Type="Int32" />
+    <Property Name="id_mascota" Type="Int32" />
+    <NavigationProperty Name="Adopcion" Relationship="MascotaModel.FK__DetalleAd__id_ad__2F10007B" FromRole="DetalleAdopcion" ToRole="Adopcion" />
+    <NavigationProperty Name="Mascotas" Relationship="MascotaModel.FK__DetalleAd__id_ma__300424B4" FromRole="DetalleAdopcion" ToRole="Mascotas" />
+  </EntityType>
+  <EntityType Name="Especie">
+    <Key>
+      <PropertyRef Name="id_especie" />
+    </Key>
+    <Property Name="id_especie" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Mascotas" Relationship="MascotaModel.FK__Mascotas__id_esp__1B0907CE" FromRole="Especie" ToRole="Mascotas" />
+  </EntityType>
+  <EntityType Name="Hogar">
+    <Key>
+      <PropertyRef Name="id_hogar" />
+    </Key>
+    <Property Name="id_hogar" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="direccion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="id_personal" Type="Int32" />
+    <Property Name="id_tipo_hogar" Type="Int32" />
+    <NavigationProperty Name="Personal" Relationship="MascotaModel.FK__Hogar__id_person__0DAF0CB0" FromRole="Hogar" ToRole="Personal" />
+    <NavigationProperty Name="Tipo_hogar" Relationship="MascotaModel.FK__Hogar__id_tipo_h__0EA330E9" FromRole="Hogar" ToRole="Tipo_hogar" />
+    <NavigationProperty Name="Mascotas" Relationship="MascotaModel.FK__Mascotas__id_hog__1CF15040" FromRole="Hogar" ToRole="Mascotas" />
+  </EntityType>
+  <EntityType Name="Mascotas">
+    <Key>
+      <PropertyRef Name="id_mascota" />
+    </Key>
+    <Property Name="id_mascota" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="sexo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="id_especie" Type="Int32" />
+    <Property Name="id_raza" Type="Int32" />
+    <Property Name="color" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="id_hogar" Type="Int32" />
+    <NavigationProperty Name="DetalleAdopcion" Relationship="MascotaModel.FK__DetalleAd__id_ma__300424B4" FromRole="Mascotas" ToRole="DetalleAdopcion" />
+    <NavigationProperty Name="Especie" Relationship="MascotaModel.FK__Mascotas__id_esp__1B0907CE" FromRole="Mascotas" ToRole="Especie" />
+    <NavigationProperty Name="Hogar" Relationship="MascotaModel.FK__Mascotas__id_hog__1CF15040" FromRole="Mascotas" ToRole="Hogar" />
+    <NavigationProperty Name="Raza" Relationship="MascotaModel.FK__Mascotas__id_raz__1BFD2C07" FromRole="Mascotas" ToRole="Raza" />
+  </EntityType>
+  <EntityType Name="Personal">
+    <Key>
+      <PropertyRef Name="id_personal" />
+    </Key>
+    <Property Name="id_personal" Type="Int32" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="dni" Type="Int32" />
+    <Property Name="direccion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="id_tarea" Type="Int32" />
+    <NavigationProperty Name="Hogar" Relationship="MascotaModel.FK__Hogar__id_person__0DAF0CB0" FromRole="Personal" ToRole="Hogar" />
+    <NavigationProperty Name="Tareas" Relationship="MascotaModel.FK__Personal__id_tar__0519C6AF" FromRole="Personal" ToRole="Tareas" />
+  </EntityType>
+  <EntityType Name="Raza">
+    <Key>
+      <PropertyRef Name="id_raza" />
+    </Key>
+    <Property Name="id_raza" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Mascotas" Relationship="MascotaModel.FK__Mascotas__id_raz__1BFD2C07" FromRole="Raza" ToRole="Mascotas" />
+  </EntityType>
+  <EntityType Name="Tareas">
+    <Key>
+      <PropertyRef Name="id_tarea" />
+    </Key>
+    <Property Name="id_tarea" Type="Int32" Nullable="false" />
+    <Property Name="descripcion_tarea" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Personal" Relationship="MascotaModel.FK__Personal__id_tar__0519C6AF" FromRole="Tareas" ToRole="Personal" />
+  </EntityType>
+  <EntityType Name="Tipo_hogar">
+    <Key>
+      <PropertyRef Name="id_tipo_hogar" />
+    </Key>
+    <Property Name="id_tipo_hogar" Type="Int32" Nullable="false" />
+    <Property Name="descripcion_tipo_hogar" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Hogar" Relationship="MascotaModel.FK__Hogar__id_tipo_h__0EA330E9" FromRole="Tipo_hogar" ToRole="Hogar" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="usuario" />
+    </Key>
+    <Property Name="usuario" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="pass" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Adopcion" Relationship="MascotaModel.FK__Adopcion__usuari__2A4B4B5E" FromRole="Usuarios" ToRole="Adopcion" />
+  </EntityType>
+  <Association Name="FK__Adopcion__id_ado__29572725">
+    <End Role="Adoptantes" Type="MascotaModel.Adoptantes" Multiplicity="0..1" />
+    <End Role="Adopcion" Type="MascotaModel.Adopcion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adoptantes">
+        <PropertyRef Name="id_adoptante" />
+      </Principal>
+      <Dependent Role="Adopcion">
+        <PropertyRef Name="id_adoptante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Adopcion__usuari__2A4B4B5E">
+    <End Role="Usuarios" Type="MascotaModel.Usuarios" Multiplicity="0..1" />
+    <End Role="Adopcion" Type="MascotaModel.Adopcion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="usuario" />
+      </Principal>
+      <Dependent Role="Adopcion">
+        <PropertyRef Name="usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleAd__id_ad__2F10007B">
+    <End Role="Adopcion" Type="MascotaModel.Adopcion" Multiplicity="0..1" />
+    <End Role="DetalleAdopcion" Type="MascotaModel.DetalleAdopcion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adopcion">
+        <PropertyRef Name="id_adopcion" />
+      </Principal>
+      <Dependent Role="DetalleAdopcion">
+        <PropertyRef Name="id_adopcion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleAd__id_ma__300424B4">
+    <End Role="Mascotas" Type="MascotaModel.Mascotas" Multiplicity="0..1" />
+    <End Role="DetalleAdopcion" Type="MascotaModel.DetalleAdopcion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mascotas">
+        <PropertyRef Name="id_mascota" />
+      </Principal>
+      <Dependent Role="DetalleAdopcion">
+        <PropertyRef Name="id_mascota" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mascotas__id_esp__1B0907CE">
+    <End Role="Especie" Type="MascotaModel.Especie" Multiplicity="0..1" />
+    <End Role="Mascotas" Type="MascotaModel.Mascotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Especie">
+        <PropertyRef Name="id_especie" />
+      </Principal>
+      <Dependent Role="Mascotas">
+        <PropertyRef Name="id_especie" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Hogar__id_person__0DAF0CB0">
+    <End Role="Personal" Type="MascotaModel.Personal" Multiplicity="0..1" />
+    <End Role="Hogar" Type="MascotaModel.Hogar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personal">
+        <PropertyRef Name="id_personal" />
+      </Principal>
+      <Dependent Role="Hogar">
+        <PropertyRef Name="id_personal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Hogar__id_tipo_h__0EA330E9">
+    <End Role="Tipo_hogar" Type="MascotaModel.Tipo_hogar" Multiplicity="0..1" />
+    <End Role="Hogar" Type="MascotaModel.Hogar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_hogar">
+        <PropertyRef Name="id_tipo_hogar" />
+      </Principal>
+      <Dependent Role="Hogar">
+        <PropertyRef Name="id_tipo_hogar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mascotas__id_hog__1CF15040">
+    <End Role="Hogar" Type="MascotaModel.Hogar" Multiplicity="0..1" />
+    <End Role="Mascotas" Type="MascotaModel.Mascotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hogar">
+        <PropertyRef Name="id_hogar" />
+      </Principal>
+      <Dependent Role="Mascotas">
+        <PropertyRef Name="id_hogar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mascotas__id_raz__1BFD2C07">
+    <End Role="Raza" Type="MascotaModel.Raza" Multiplicity="0..1" />
+    <End Role="Mascotas" Type="MascotaModel.Mascotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Raza">
+        <PropertyRef Name="id_raza" />
+      </Principal>
+      <Dependent Role="Mascotas">
+        <PropertyRef Name="id_raza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Personal__id_tar__0519C6AF">
+    <End Role="Tareas" Type="MascotaModel.Tareas" Multiplicity="0..1" />
+    <End Role="Personal" Type="MascotaModel.Personal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tareas">
+        <PropertyRef Name="id_tarea" />
+      </Principal>
+      <Dependent Role="Personal">
+        <PropertyRef Name="id_tarea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

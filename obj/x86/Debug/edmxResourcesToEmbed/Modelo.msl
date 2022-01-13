@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MascotaModelStoreContainer" CdmEntityContainer="MascotaEntities">
+    <EntitySetMapping Name="Adopcion">
+      <EntityTypeMapping TypeName="MascotaModel.Adopcion">
+        <MappingFragment StoreEntitySet="Adopcion">
+          <ScalarProperty Name="id_adopcion" ColumnName="id_adopcion" />
+          <ScalarProperty Name="id_adoptante" ColumnName="id_adoptante" />
+          <ScalarProperty Name="fecha_adopcion" ColumnName="fecha_adopcion" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Adoptantes">
+      <EntityTypeMapping TypeName="MascotaModel.Adoptantes">
+        <MappingFragment StoreEntitySet="Adoptantes">
+          <ScalarProperty Name="id_adoptante" ColumnName="id_adoptante" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleAdopcion">
+      <EntityTypeMapping TypeName="MascotaModel.DetalleAdopcion">
+        <MappingFragment StoreEntitySet="DetalleAdopcion">
+          <ScalarProperty Name="id_detalle" ColumnName="id_detalle" />
+          <ScalarProperty Name="id_adopcion" ColumnName="id_adopcion" />
+          <ScalarProperty Name="id_mascota" ColumnName="id_mascota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Especie">
+      <EntityTypeMapping TypeName="MascotaModel.Especie">
+        <MappingFragment StoreEntitySet="Especie">
+          <ScalarProperty Name="id_especie" ColumnName="id_especie" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hogar">
+      <EntityTypeMapping TypeName="MascotaModel.Hogar">
+        <MappingFragment StoreEntitySet="Hogar">
+          <ScalarProperty Name="id_hogar" ColumnName="id_hogar" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="id_personal" ColumnName="id_personal" />
+          <ScalarProperty Name="id_tipo_hogar" ColumnName="id_tipo_hogar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mascotas">
+      <EntityTypeMapping TypeName="MascotaModel.Mascotas">
+        <MappingFragment StoreEntitySet="Mascotas">
+          <ScalarProperty Name="id_mascota" ColumnName="id_mascota" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="id_especie" ColumnName="id_especie" />
+          <ScalarProperty Name="id_raza" ColumnName="id_raza" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="id_hogar" ColumnName="id_hogar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personal">
+      <EntityTypeMapping TypeName="MascotaModel.Personal">
+        <MappingFragment StoreEntitySet="Personal">
+          <ScalarProperty Name="id_personal" ColumnName="id_personal" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="id_tarea" ColumnName="id_tarea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Raza">
+      <EntityTypeMapping TypeName="MascotaModel.Raza">
+        <MappingFragment StoreEntitySet="Raza">
+          <ScalarProperty Name="id_raza" ColumnName="id_raza" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tareas">
+      <EntityTypeMapping TypeName="MascotaModel.Tareas">
+        <MappingFragment StoreEntitySet="Tareas">
+          <ScalarProperty Name="id_tarea" ColumnName="id_tarea" />
+          <ScalarProperty Name="descripcion_tarea" ColumnName="descripcion_tarea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_hogar">
+      <EntityTypeMapping TypeName="MascotaModel.Tipo_hogar">
+        <MappingFragment StoreEntitySet="Tipo_hogar">
+          <ScalarProperty Name="id_tipo_hogar" ColumnName="id_tipo_hogar" />
+          <ScalarProperty Name="descripcion_tipo_hogar" ColumnName="descripcion_tipo_hogar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="MascotaModel.Usuarios">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

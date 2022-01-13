@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E750D6F-F77F-4154-9E7B-C25AB225EFAC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Mascota.My.MyApplication</StartupObject>
+    <RootNamespace>Mascota</RootNamespace>
+    <AssemblyName>Mascota</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Mascota.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Mascota.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adopcion\Detalle.Designer.vb">
+      <DependentUpon>Detalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Adopcion\Detalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adopcion\GenerarAdopcion.Designer.vb">
+      <DependentUpon>GenerarAdopcion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Adopcion\GenerarAdopcion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adopcion\ListaAdopciones.Designer.vb">
+      <DependentUpon>ListaAdopciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Adopcion\ListaAdopciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adoptantes\AgregarAdoptante.Designer.vb">
+      <DependentUpon>AgregarAdoptante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Adoptantes\AgregarAdoptante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clases\Adop.vb" />
+    <Compile Include="Clases\Adoptante.vb" />
+    <Compile Include="Clases\DetalleAdop.vb" />
+    <Compile Include="Clases\Mascota.vb" />
+    <Compile Include="Clases\Usuario.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MascotaDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MascotaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Mascotas\AgregarMascota.Designer.vb">
+      <DependentUpon>AgregarMascota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mascotas\AgregarMascota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mascotas\EliminarMascota.Designer.vb">
+      <DependentUpon>EliminarMascota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mascotas\EliminarMascota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mascotas\ModificarMascota.Designer.vb">
+      <DependentUpon>ModificarMascota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mascotas\ModificarMascota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mascotas\MostarMascota.Designer.vb">
+      <DependentUpon>MostarMascota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Mascotas\MostarMascota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MDI_administrador.Designer.vb">
+      <DependentUpon>MDI_administrador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MDI_administrador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MDI_ayudante.Designer.vb">
+      <DependentUpon>MDI_ayudante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MDI_ayudante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\MDI_visitante.Designer.vb">
+      <DependentUpon>MDI_visitante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\MDI_visitante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelo.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Modelo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reportes\frmreportecomprobante.Designer.vb">
+      <DependentUpon>frmreportecomprobante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmreportecomprobante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Adopcion\Detalle.resx">
+      <DependentUpon>Detalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adopcion\GenerarAdopcion.resx">
+      <DependentUpon>GenerarAdopcion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adopcion\ListaAdopciones.resx">
+      <DependentUpon>ListaAdopciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Adoptantes\AgregarAdoptante.resx">
+      <DependentUpon>AgregarAdoptante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mascotas\AgregarMascota.resx">
+      <DependentUpon>AgregarMascota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mascotas\EliminarMascota.resx">
+      <DependentUpon>EliminarMascota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mascotas\ModificarMascota.resx">
+      <DependentUpon>ModificarMascota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mascotas\MostarMascota.resx">
+      <DependentUpon>MostarMascota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MDI_administrador.resx">
+      <DependentUpon>MDI_administrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MDI_ayudante.resx">
+      <DependentUpon>MDI_ayudante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\MDI_visitante.resx">
+      <DependentUpon>MDI_visitante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmreportecomprobante.resx">
+      <DependentUpon>frmreportecomprobante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporte2.rdlc" />
+    <EmbeddedResource Include="Reportes\rptcomprobante.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Modelo.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="MascotaDataSet2.xsc">
+      <DependentUpon>MascotaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MascotaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MascotaDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MascotaDataSet2.xss">
+      <DependentUpon>MascotaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_visitante.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_visitantee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_ayudante.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

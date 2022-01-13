@@ -1,0 +1,611 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Mascota
+</name>
+</assembly>
+<members>
+<member name="T:Mascota.MascotaDataSet2.View_2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2.generar_comprobanteDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2.View_2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2.generar_comprobanteRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2.View_2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2.generar_comprobanteRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2TableAdapters.View_2TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2TableAdapters.generar_comprobanteTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Mascota.MascotaDataSet2TableAdapters.TableAdapterManager.UpdateUpdatedRows(Mascota.MascotaDataSet2,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Mascota.MascotaDataSet2TableAdapters.TableAdapterManager.UpdateInsertedRows(Mascota.MascotaDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Mascota.MascotaDataSet2TableAdapters.TableAdapterManager.UpdateDeletedRows(Mascota.MascotaDataSet2,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Mascota.MascotaDataSet2TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Mascota.MascotaDataSet2TableAdapters.TableAdapterManager.UpdateAll(Mascota.MascotaDataSet2)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Mascota.MascotaDataSet2TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="M:Mascota.MascotaEntities.#ctor">
+	<summary>
+ Initializes a new MascotaEntities object using the connection string found in the 'MascotaEntities' section of the application configuration file.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.#ctor(System.String)">
+	<summary>
+ Initialize a new MascotaEntities object.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.#ctor(System.Data.EntityClient.EntityConnection)">
+	<summary>
+ Initialize a new MascotaEntities object.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.Adopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.Adoptantes">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.DetalleAdopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.Especie">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.Hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.Mascotas">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.Personal">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.Raza">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.Tareas">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.Tipo_hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.MascotaEntities.Usuarios">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToAdopcion(Mascota.Adopcion)">
+	<summary>
+ Deprecated Method for adding a new object to the Adopcion EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToAdoptantes(Mascota.Adoptantes)">
+	<summary>
+ Deprecated Method for adding a new object to the Adoptantes EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToDetalleAdopcion(Mascota.DetalleAdopcion)">
+	<summary>
+ Deprecated Method for adding a new object to the DetalleAdopcion EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToEspecie(Mascota.Especie)">
+	<summary>
+ Deprecated Method for adding a new object to the Especie EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToHogar(Mascota.Hogar)">
+	<summary>
+ Deprecated Method for adding a new object to the Hogar EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToMascotas(Mascota.Mascotas)">
+	<summary>
+ Deprecated Method for adding a new object to the Mascotas EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToPersonal(Mascota.Personal)">
+	<summary>
+ Deprecated Method for adding a new object to the Personal EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToRaza(Mascota.Raza)">
+	<summary>
+ Deprecated Method for adding a new object to the Raza EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToTareas(Mascota.Tareas)">
+	<summary>
+ Deprecated Method for adding a new object to the Tareas EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToTipo_hogar(Mascota.Tipo_hogar)">
+	<summary>
+ Deprecated Method for adding a new object to the Tipo_hogar EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="M:Mascota.MascotaEntities.AddToUsuarios(Mascota.Usuarios)">
+	<summary>
+ Deprecated Method for adding a new object to the Usuarios EntitySet. Consider using the .Add method of the associated ObjectSet(Of T) property instead.
+ </summary>
+</member><member name="T:Mascota.MascotaEntities">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.Adopcion.CreateAdopcion(System.Int32)">
+	<summary>
+ Create a new Adopcion object.
+ </summary>
+	<param name="id_adopcion">Initial value of the id_adopcion property.</param>
+</member><member name="P:Mascota.Adopcion.id_adopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adopcion.id_adoptante">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adopcion.fecha_adopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adopcion.usuario">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adopcion.Adoptantes">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adopcion.AdoptantesReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adopcion.Usuarios">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adopcion.UsuariosReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adopcion.DetalleAdopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.Adopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.Adoptantes.CreateAdoptantes(System.Int32)">
+	<summary>
+ Create a new Adoptantes object.
+ </summary>
+	<param name="id_adoptante">Initial value of the id_adoptante property.</param>
+</member><member name="P:Mascota.Adoptantes.id_adoptante">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adoptantes.apellido">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adoptantes.nombre">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adoptantes.dni">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adoptantes.direccion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adoptantes.email">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adoptantes.telefono">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Adoptantes.Adopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.Adoptantes">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.DetalleAdopcion.CreateDetalleAdopcion(System.Int32)">
+	<summary>
+ Create a new DetalleAdopcion object.
+ </summary>
+	<param name="id_detalle">Initial value of the id_detalle property.</param>
+</member><member name="P:Mascota.DetalleAdopcion.id_detalle">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.DetalleAdopcion.id_adopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.DetalleAdopcion.id_mascota">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.DetalleAdopcion.Adopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.DetalleAdopcion.AdopcionReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.DetalleAdopcion.Mascotas">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.DetalleAdopcion.MascotasReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.DetalleAdopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.Especie.CreateEspecie(System.Int32)">
+	<summary>
+ Create a new Especie object.
+ </summary>
+	<param name="id_especie">Initial value of the id_especie property.</param>
+</member><member name="P:Mascota.Especie.id_especie">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Especie.descripcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Especie.Mascotas">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.Especie">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.Hogar.CreateHogar(System.Int32)">
+	<summary>
+ Create a new Hogar object.
+ </summary>
+	<param name="id_hogar">Initial value of the id_hogar property.</param>
+</member><member name="P:Mascota.Hogar.id_hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Hogar.nombre">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Hogar.direccion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Hogar.telefono">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Hogar.id_personal">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Hogar.id_tipo_hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Hogar.Personal">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Hogar.PersonalReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Hogar.Tipo_hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Hogar.Tipo_hogarReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Hogar.Mascotas">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.Hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.Mascotas.CreateMascotas(System.Int32)">
+	<summary>
+ Create a new Mascotas object.
+ </summary>
+	<param name="id_mascota">Initial value of the id_mascota property.</param>
+</member><member name="P:Mascota.Mascotas.id_mascota">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.nombre">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.sexo">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.id_especie">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.id_raza">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.color">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.id_hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.DetalleAdopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.Especie">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.EspecieReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.Hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.HogarReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.Raza">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Mascotas.RazaReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.Mascotas">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.Personal.CreatePersonal(System.Int32)">
+	<summary>
+ Create a new Personal object.
+ </summary>
+	<param name="id_personal">Initial value of the id_personal property.</param>
+</member><member name="P:Mascota.Personal.id_personal">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Personal.apellido">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Personal.nombre">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Personal.dni">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Personal.direccion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Personal.email">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Personal.telefono">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Personal.id_tarea">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Personal.Hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Personal.Tareas">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Personal.TareasReference">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.Personal">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.Raza.CreateRaza(System.Int32)">
+	<summary>
+ Create a new Raza object.
+ </summary>
+	<param name="id_raza">Initial value of the id_raza property.</param>
+</member><member name="P:Mascota.Raza.id_raza">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Raza.descripcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Raza.Mascotas">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.Raza">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.Tareas.CreateTareas(System.Int32)">
+	<summary>
+ Create a new Tareas object.
+ </summary>
+	<param name="id_tarea">Initial value of the id_tarea property.</param>
+</member><member name="P:Mascota.Tareas.id_tarea">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Tareas.descripcion_tarea">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Tareas.Personal">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.Tareas">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.Tipo_hogar.CreateTipo_hogar(System.Int32)">
+	<summary>
+ Create a new Tipo_hogar object.
+ </summary>
+	<param name="id_tipo_hogar">Initial value of the id_tipo_hogar property.</param>
+</member><member name="P:Mascota.Tipo_hogar.id_tipo_hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Tipo_hogar.descripcion_tipo_hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Tipo_hogar.Hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.Tipo_hogar">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="M:Mascota.Usuarios.CreateUsuarios(System.String)">
+	<summary>
+ Create a new Usuarios object.
+ </summary>
+	<param name="usuario">Initial value of the usuario property.</param>
+</member><member name="P:Mascota.Usuarios.usuario">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Usuarios.pass">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.Usuarios.Adopcion">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="T:Mascota.Usuarios">
+	<summary>
+ No Metadata Documentation available.
+ </summary>
+</member><member name="P:Mascota.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Mascota.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Mascota.My.Resources.Resources.admin_home">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Mascota.My.Resources.Resources.home_ayudante">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Mascota.My.Resources.Resources.home_visitante">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Mascota.My.Resources.Resources.home_visitantee">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:Mascota.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
