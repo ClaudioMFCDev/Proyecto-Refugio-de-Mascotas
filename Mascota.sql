@@ -1,7 +1,6 @@
 create database Mascota
 go
 
-/*DESKTOP-J5HSONP*/
 use Mascota
 go
 
@@ -97,21 +96,21 @@ CREATE TABLE DetalleAdopcion(
 INSERT INTO Tareas(id_tarea, descripcion_tarea) VALUES (1, 'Admin')
 INSERT INTO Tareas(id_tarea, descripcion_tarea) VALUES (2, 'Ayudante')
 
-INSERT INTO Personal(id_personal, apellido, nombre, dni, direccion, email, telefono, id_tarea) VALUES (1, 'Castillo', 'Claudio', 30123456, 'Junín 123', 'claudio@gmail.com', '3794000111', 1)
+INSERT INTO Personal(id_personal, apellido, nombre, dni, direccion, email, telefono, id_tarea) VALUES (1, 'Castillo', 'Claudio', 30123456, 'JunÃ­n 123', 'claudio@gmail.com', '3794000111', 1)
 INSERT INTO Personal(id_personal, apellido, nombre, dni, direccion, email, telefono, id_tarea) VALUES (2, 'Perez', 'Juan', 33789456, 'Castelli 2514', 'juan@gmail.com', '37947898444', 2)
 
 INSERT INTO Tipo_hogar(id_tipo_hogar, descripcion_tipo_hogar) VALUES (1, 'Refugio')
 INSERT INTO Tipo_hogar(id_tipo_hogar, descripcion_tipo_hogar) VALUES (2, 'Transitorio')
 
 INSERT INTO Hogar(id_hogar, nombre, direccion, telefono, id_personal, id_tipo_hogar ) VALUES (1, 'Hogar Mascotas', 'Belgrano 456', '3794555888', 1, 1)
-INSERT INTO Hogar(id_hogar, nombre, direccion, telefono, id_personal, id_tipo_hogar ) VALUES (2, 'ONG Mascotas', 'San Martín 1234', '3794589896', 2, 2)
+INSERT INTO Hogar(id_hogar, nombre, direccion, telefono, id_personal, id_tipo_hogar ) VALUES (2, 'ONG Mascotas', 'San MartÃ­n 1234', '3794589896', 2, 2)
 
 INSERT INTO Especie(id_especie, descripcion) VALUES (1, 'Perro')
 INSERT INTO Especie(id_especie, descripcion) VALUES (2, 'Gato')
 
 INSERT INTO Raza(id_raza, descripcion) VALUES (1, 'Caniche')
 INSERT INTO Raza(id_raza, descripcion) VALUES (2, 'Bulldog')
-INSERT INTO Raza(id_raza, descripcion) VALUES (3, 'Siamés')
+INSERT INTO Raza(id_raza, descripcion) VALUES (3, 'SiamÃ©s')
 INSERT INTO Raza(id_raza, descripcion) VALUES (4, 'Gato Persa')
 INSERT INTO Raza(id_raza, descripcion) VALUES (5, 'Perro Mestizo')
 INSERT INTO Raza(id_raza, descripcion) VALUES (6, 'Gato Mestizo')
@@ -123,7 +122,7 @@ INSERT INTO Mascotas(id_mascota, nombre, sexo, id_especie, id_raza, color, id_ho
 
 
 INSERT INTO Adoptantes(id_adoptante, apellido, nombre, dni, direccion, email, telefono) VALUES (1, 'Gonzales', 'Maria', 27789456, 'Francia 789', 'maria@gmail.com', 3794999888)
-INSERT INTO Adoptantes(id_adoptante, apellido, nombre, dni, direccion, email, telefono) VALUES (2, 'Alarcón', 'Lidia', 35000111, 'Chacabuco 1247', 'lidia@gmail.com', 3794222444)
+INSERT INTO Adoptantes(id_adoptante, apellido, nombre, dni, direccion, email, telefono) VALUES (2, 'AlarcÃ³n', 'Lidia', 35000111, 'Chacabuco 1247', 'lidia@gmail.com', 3794222444)
 
 INSERT INTO Usuarios(usuario, pass) VALUES ('responsable', '1234')
 INSERT INTO Usuarios(usuario, pass) VALUES ('ayudante', '123')
